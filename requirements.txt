@@ -1,0 +1,28 @@
+# ── Data fetching ─────────────────────────────────────────────────────────────
+requests>=2.31.0          # FinMind API HTTP calls
+tenacity>=8.2.0           # retry logic for API rate limits
+
+# ── Data manipulation ─────────────────────────────────────────────────────────
+pandas>=2.1.0
+numpy>=1.26.0
+pyarrow>=14.0.0           # parquet read/write via pandas
+
+# ── Statistics & econometrics ─────────────────────────────────────────────────
+statsmodels>=0.14.0       # OLS, event study CAR, t-tests
+scipy>=1.11.0             # additional statistical tests
+
+# ── Machine learning (prediction model stage) ─────────────────────────────────
+scikit-learn>=1.3.0       # cross-validation, pipeline, metrics
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib>=3.8.0
+plotly>=5.18.0            # interactive charts for notebooks
+kaleido>=0.2.1            # plotly static export for slides
+
+# ── Notebooks ─────────────────────────────────────────────────────────────────
+jupyter>=1.0.0
+ipykernel>=6.26.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0      # keep API token out of source code
+tqdm>=4.66.0              # progress bars for batch data pulls

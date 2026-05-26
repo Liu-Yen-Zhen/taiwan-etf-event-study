@@ -1,0 +1,79 @@
+======================================================================
+  Cross-Sectional Regression v2  (cleaned data + non-overlap features)
+======================================================================
+
+N panel : 71 (event × added_stock)
+Predictors: log_market_cap, log_avg_turnover, turnover_ratio_60d, dividend_yield, momentum_pre, volume_anomaly_pre_5
+
+──────────────────────────────────────────────────────────────────────
+MODEL 1: CAR_pre_30
+──────────────────────────────────────────────────────────────────────
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             CAR_pre_30   R-squared:                       0.072
+Model:                            OLS   Adj. R-squared:                 -0.030
+Method:                 Least Squares   F-statistic:                    0.7066
+Date:                Tue, 19 May 2026   Prob (F-statistic):              0.646
+Time:                        15:52:36   Log-Likelihood:                 59.227
+No. Observations:                  62   AIC:                            -104.5
+Df Residuals:                      55   BIC:                            -89.56
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                    0.2995      0.384      0.781      0.438      -0.469       1.069
+log_market_cap           0.0111      0.033      0.340      0.735      -0.054       0.076
+log_avg_turnover        -0.0251      0.033     -0.765      0.447      -0.091       0.041
+turnover_ratio_60d       1.8338      2.118      0.866      0.390      -2.410       6.078
+dividend_yield          -0.0113      0.010     -1.146      0.257      -0.031       0.008
+momentum_pre            -0.0454      0.082     -0.550      0.584      -0.211       0.120
+volume_anomaly_pre_5     0.0143      0.013      1.118      0.268      -0.011       0.040
+==============================================================================
+Omnibus:                        5.285   Durbin-Watson:                   2.167
+Prob(Omnibus):                  0.071   Jarque-Bera (JB):                4.991
+Skew:                           0.695   Prob(JB):                       0.0824
+Kurtosis:                       2.970   Cond. No.                     5.49e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.49e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+──────────────────────────────────────────────────────────────────────
+MODEL 2: CAR_post_30
+──────────────────────────────────────────────────────────────────────
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            CAR_post_30   R-squared:                       0.312
+Model:                            OLS   Adj. R-squared:                  0.237
+Method:                 Least Squares   F-statistic:                     4.154
+Date:                Tue, 19 May 2026   Prob (F-statistic):            0.00164
+Time:                        15:52:36   Log-Likelihood:                 59.698
+No. Observations:                  62   AIC:                            -105.4
+Df Residuals:                      55   BIC:                            -90.51
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                    0.2323      0.381      0.610      0.544      -0.531       0.996
+log_market_cap           0.0562      0.032      1.736      0.088      -0.009       0.121
+log_avg_turnover        -0.0837      0.032     -2.575      0.013      -0.149      -0.019
+turnover_ratio_60d       6.6234      2.102      3.152      0.003       2.412      10.835
+dividend_yield          -0.0221      0.010     -2.255      0.028      -0.042      -0.002
+momentum_pre             0.0703      0.082      0.859      0.394      -0.094       0.234
+volume_anomaly_pre_5    -0.0030      0.013     -0.233      0.816      -0.028       0.022
+==============================================================================
+Omnibus:                        1.561   Durbin-Watson:                   1.364
+Prob(Omnibus):                  0.458   Jarque-Bera (JB):                1.391
+Skew:                          -0.360   Prob(JB):                        0.499
+Kurtosis:                       2.864   Cond. No.                     5.49e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.49e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+

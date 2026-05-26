@@ -1,0 +1,23 @@
+────────────────────────────────────────────────────────────────────
+  OLS: CAR (announcement → effective date)
+────────────────────────────────────────────────────────────────────
+  N = 18   Adj. R² = 0.2514   F-stat p = 0.0035
+
+  ⚠  N = 18 < 20  —  small sample, interpret with caution
+
+  Robust standard errors (HC3)
+
+                     coef  std_err        t    P>|t|  sig
+log_market_cap   0.001549 0.028705 0.053979 0.956952     
+log_impact_ratio 0.029835 0.011030 2.704832 0.006834  ***
+dividend_yield   0.000315 0.009684 0.032482 0.974087     
+
+  Significance: * p<.10  ** p<.05  *** p<.01
+
+  Variance Inflation Factors
+        variable  VIF
+  log_market_cap 1.27
+log_impact_ratio 1.20
+  dividend_yield 1.08
+  (VIF > 10 → multicollinearity concern)
+────────────────────────────────────────────────────────────────────
